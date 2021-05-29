@@ -89,7 +89,7 @@ for current_video in videos_links:
 
     if main_title not in downloaded_videos:
         video = current_video.streams.filter(progressive=True, file_extension='mp4').order_by(
-            'resolucion').desc().first()
+            'resolution').desc().first()
 
         if os.path.exists(str(os.getcwd()) + "/" + str(video.default_filename)):
             # comprobando si el video existe en esta carpeta
